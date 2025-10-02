@@ -1,5 +1,5 @@
 #!/bin/bash
-FILE_NAME="/tmp/test_file.txt"
+FILE_NAME="/tmp/test_file"
 if [ -f "$FILE_NAME" ]; then
   echo "file exists."
 else
