@@ -7,14 +7,14 @@ else
   exit 1
 fi
 
-if [ test -r "$FILE_NAME" ]; then
+if [ -r "$FILE_NAME" ]; then
     echo "$FILE_NAME is readable."
 else
     echo "$FILE_NAME is not readable."
     exit 1
 fi
 
-if [ test -w "$FILE_NAME" ]; then
+if [ -w "$FILE_NAME" ]; then
     echo "$FILE_NAME is writable."
 else
     echo "$FILE_NAME is not writable."
