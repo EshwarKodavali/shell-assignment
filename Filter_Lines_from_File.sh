@@ -10,7 +10,7 @@ do
     exit 1
 done < "$SOURCE_FILE"
 
-while IFS=read -r line;
+while IFS= read -r line;
 do
     if [[ "$line" == *"$SEARCH_WORD"* ]]; then
     echo "$line" >> "$DESTINATION_FILE"
