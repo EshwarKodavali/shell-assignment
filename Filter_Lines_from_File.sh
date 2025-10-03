@@ -4,11 +4,10 @@ SOURCE_FILE=/tmp/test/source
 DESTINATION_FILE=/tmp/test/destination
 SEARCH_WORD="ERROR"
 
-while IFS= read -r line;
-do
-    echo "$line" > "$DESTINATION_FILE"
-    exit 1
-done < "$SOURCE_FILE"
+first_line=$(head -n 1 "$SOURCE_FILE")
+
+# Append the first line to the target file
+echo "$first_line" >> "$DESTINATION_FILE"
 
 while IFS= read -r line;
 do
