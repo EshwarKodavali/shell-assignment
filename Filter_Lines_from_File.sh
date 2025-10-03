@@ -4,7 +4,7 @@ SOURCE_FILE=/tmp/test/source
 DESTINATION_FILE=/tmp/test/destination
 SEARCH_WORD="ERROR"
 
-while IFS=read -r line;
+while IFS= read -r line;
 do
     echo "$line" > "$DESTINATION_FILE"
     exit 1
