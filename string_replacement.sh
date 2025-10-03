@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR="/tmp"
+DIR="/tmp/test"
 
 find $DIR -type f -name "*.conf" -exec sed -i 's/FOO/BAR/g' {} +
 
