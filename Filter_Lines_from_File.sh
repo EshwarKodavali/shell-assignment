@@ -9,7 +9,7 @@ first_line=$(head -n 1 "$SOURCE_FILE")
 # Append the first line to the target file
 echo "$first_line" >> "$DESTINATION_FILE"
 
-tail -n +2 "$SOURCE_FILE" | while IFS= read -r line;
+head -n 2 "$SOURCE_FILE" | while IFS= read -r line;
 do
     if [[ "$line" == *"$SEARCH_WORD"* ]]; then
     echo "$line" >> "$DESTINATION_FILE"
